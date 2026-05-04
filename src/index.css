@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #070b14;
+  --bg-secondary: #0d1526;
+  --bg-tertiary: #111c35;
+  --accent-cyan: #00f5ff;
+  --accent-green: #00ff88;
+  --accent-orange: #ff6b00;
+  --accent-red: #ff2d55;
+  --grid-line: rgba(0, 245, 255, 0.07);
+  --text-primary: #e0f4ff;
+  --text-muted: #5c7a99;
+  --node-bg: #0a1628;
+  --glow-cyan: 0 0 8px rgba(0, 245, 255, 0.6), 0 0 20px rgba(0, 245, 255, 0.2);
+  --glow-green: 0 0 8px rgba(0, 255, 136, 0.6), 0 0 20px rgba(0, 255, 136, 0.2);
+  --glow-orange: 0 0 8px rgba(255, 107, 0, 0.6), 0 0 20px rgba(255, 107, 0, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Rajdhani', 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 245, 255, 0.012) 2px,
+    rgba(0, 245, 255, 0.012) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Dark/Light mode — default to dark */
+.DarkMode {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.LightMode {
+  --bg-primary: #f0f4ff;
+  --bg-secondary: #dde6f5;
+  --bg-tertiary: #c8d8f0;
+  --text-primary: #0a1628;
+  --text-muted: #4a6080;
+  --grid-line: rgba(0, 100, 180, 0.12);
+  --node-bg: #e8f0fc;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: all 0.4s ease;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--accent-cyan); border-radius: 2px; }
