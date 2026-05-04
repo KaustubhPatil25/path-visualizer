@@ -9,7 +9,7 @@ const TooltipItem = (props) => {
 
   return (
     <span>
-      <span id={"Tooltip-" + id}>playground {id}</span>
+      <span id={"Tooltip-" + id}></span>
       <Tooltip
         placement={item.placement}
         isOpen={tooltipOpen}
